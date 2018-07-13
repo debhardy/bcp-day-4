@@ -10,22 +10,32 @@
     <h1>Just an App</h1>
 
     <main>
-       <p>
-            <input name= "power" type= "radio"> Square
-            <input name= "power" type= "radio"> Cube
-            <input name= "power" type= "radio"> Quadrant
-            
-            <br>
-    
-            <button onclick="count()">Click Me</button>
-       </p>
+
+        <p>
+            Name:
+            <input id="name">
+        </p>
 
        <p>
-           <input onchange="change()">
-       </p>
+        <input name= "power" type= "radio"> Square
+        <input name= "power" type= "radio"> Cube
+        <input name= "power" type= "radio"> Quadrant
+        </p>
+    
+        <p>
+            <button onclick="showName()">Click Me</button>
+        </p>
+            
+       
     </main>
 
     <script>
+        
+        function showName() {
+            var input = document.getElementById("name");
+            var name = input.value;
+            console.log(name);
+        }
         
         function count() {
             for(var i = 0; i < 10; i++) {
@@ -33,9 +43,8 @@
             }
         }
 
-        function change() {
-            console.log("a change happened")
-        }
+        
+
 
 
     </script>
