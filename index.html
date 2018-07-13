@@ -3,18 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Day 4 Repository</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <h1>Just an App</h1>
 
+    <main>
+       <p>
+            <input name= "power" type= "radio"> Square
+            <input name= "power" type= "radio"> Cube
+            <input name= "power" type= "radio"> Quadrant
+            
+            <br>
+    
+            <button onclick="count()">Click Me</button>
+       </p>
+
+       <p>
+           <input onchange="change()">
+       </p>
+    </main>
+
     <script>
-        // this is a comment to show branch
         
-        for(var i = 0; i < 10; i++) {
-            console.log(i +1);
+        function count() {
+            for(var i = 0; i < 10; i++) {
+                console.log(i + 1);
+            }
         }
+
+        function change() {
+            console.log("a change happened")
+        }
+
+
     </script>
 
 </body>
