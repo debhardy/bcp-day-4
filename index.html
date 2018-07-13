@@ -11,19 +11,19 @@
 
     <main>
 
-        <p>
-            Name:
-            <input id="name" onKeyPress="showName(event)">
-        </p>
+            <label>Number:
+                <input id="number" onKeyPress="number");>
+            </label>
+
 
        <p>
-        <input name= "power" type= "radio"> Square
-        <input name= "power" type= "radio"> Cube
-        <input name= "power" type= "radio"> Quadrant
+        <input name= "power" type= "radio" value="2"> Square
+        <input name= "power" type= "radio" value="3"> Cube
+        <input name= "power" type= "radio" value="4"> Quadrant
         </p>
     
         <p>
-            <button onclick="showName()">Click Me</button>
+            <button onclick="calc()">Click Me</button>
         </p>
 
         <p id="result"></p>
@@ -31,23 +31,35 @@
 
     <script>
         
-        function showName() {
-                var input = document.getElementById("name");
-                var name = input.value;
-                var p = document.getElementById("result");
-                p.innerText = "Your name is " + name;
-            }
+        function calc() {
+            var input = document.getElementById("number");
+            var number = input.value;
         
+        if(isNaN(number)) {
+                    alert("please input a number!");
+                }
+            else {
+                var radio = document.querySelector("input[name=power]:checked");
+
+                var p = document.getElementById("result");
+                console.log (Math.pow(number, power));
+                p.innerText = "Your number is <strong>" + number + "<strong>";
+
+                var background;
+                if(number > 25) {
+                    p.classList.add("big-number");
+                }        
+                else {
+                    p.classList.remove("big-number");
+                }
+            }
+        }
         
         function count() {
             for(var i = 0; i < 10; i++) {
                 console.log(i + 1);
             }
         }
-
-        
-
-
 
     </script>
 
