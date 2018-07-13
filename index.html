@@ -13,7 +13,7 @@
 
         <p>
             Name:
-            <input id="name">
+            <input id="name" onKeyPress="showName(event)">
         </p>
 
        <p>
@@ -25,17 +25,19 @@
         <p>
             <button onclick="showName()">Click Me</button>
         </p>
-            
-       
+
+        <p id="result"></p>
     </main>
 
     <script>
         
         function showName() {
-            var input = document.getElementById("name");
-            var name = input.value;
-            console.log(name);
-        }
+                var input = document.getElementById("name");
+                var name = input.value;
+                var p = document.getElementById("result");
+                p.innerText = "Your name is " + name;
+            }
+        
         
         function count() {
             for(var i = 0; i < 10; i++) {
